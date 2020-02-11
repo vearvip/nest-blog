@@ -21,7 +21,7 @@ export class ArticleController {
 
   @Get('findArticleById')
   findArticleById(@Query('id') id): Promise<Article> {
-    console.log(id)
+    console.log('💓', id)
     return this.articleService.findArticleById(id)
   }
 
