@@ -1,5 +1,5 @@
 # Nest Blog
-## 是next-blog的后端项目
+## 是[ react-blog ](https://github.com/vearvip/react-blog)的后端项目
 ## 技术栈
 - nest
 - mysql
