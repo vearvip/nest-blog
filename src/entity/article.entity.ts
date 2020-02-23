@@ -6,7 +6,7 @@ export class Article {
   id: number;
 
   @Column()
-  typeId: number
+  type: string
 
   @Column()
   title: string;
@@ -17,10 +17,16 @@ export class Article {
   @Column('text')
   introduce: string;
 
-  @Column('int')
+  @Column({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP'
+  })
   addTime: number
   
-  @Column('int')
+  @Column({
+    type: 'int',
+    default: 1
+  })
   viewCount: number
 
 }

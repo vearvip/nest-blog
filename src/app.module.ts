@@ -3,7 +3,6 @@ import { DefaultModule } from './module/default/default.module';
 import { AdminModule } from './module/admin/admin.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Article } from './entity/article.entity';
-import { ArticleType } from './entity/articleType.entity';
 
 @Module({
   imports: [
@@ -14,8 +13,9 @@ import { ArticleType } from './entity/articleType.entity';
       username: 'root',
       password: '12345',
       database: 'blog',
-      entities: [Article, ArticleType],
+      entities: [Article],
       synchronize: true,
+      charset : 'utf8mb4'
     }),
     DefaultModule, 
     AdminModule
